@@ -1,15 +1,22 @@
 {
   "name": "ascii-horizontal-barchart",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Ascii horizontal bar chart",
   "repository": {
     "type": "git",
     "url": "https://github.com/morishin/ascii-horizontal-barchart.git"
   },
-  "main": "chart.js",
+  "main": "lib/chart.js",
   "scripts": {
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shintaro Morikawa",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-0": "^6.5.0"
+  }
 }
